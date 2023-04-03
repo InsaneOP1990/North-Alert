@@ -49,14 +49,20 @@ namespace TestReadText
             Array warrnings = richTextBox4.Lines;
             richTextBox1.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
+            if (richTextBox6.Lines[0] != null)
+            {
+                textBox1.Text = richTextBox6.Lines[0];
+            }
+            else
+            {
+                goto next;
+            }
             string path = textBox1.Text;
             string[] files = Directory.GetFiles(path, textBox2.Text);
             string lastModifiedFile = files.OrderByDescending(f => new FileInfo(f).LastWriteTime).First();
             path = lastModifiedFile;
-            // Read all lines in .log file, find line that contains "Session Loaded!", all lines after "Session Loaded!" that contain any word in richtextbox4 and display them in a Richtextbox1
-
+            // Read all lines in .log file, find lines that contain any word in richtextbox4 and display them in a Richtextbox1
             string[] lines = System.IO.File.ReadAllLines(path);
-            //int index = Array.FindIndex(lines, line => line.Contains("[WARN]"));
             try
             {
                 for (int i = 0; i < lines.Length; i++)
@@ -77,12 +83,62 @@ namespace TestReadText
                 }
                 else
                 {
-                    FindNewWarrnings();
+                    goto next;
                 }
             }
             catch (Exception)
             {
             }
+            next:;
+            FindNewWarrnings();
+        }
+        private void FindWarrnings2()
+        {
+            Array warrnings = richTextBox4.Lines;
+            richTextBox1.Text = "";
+            //find last motified .log file in directory that has "Torch" in the name
+            if (richTextBox6.Lines[1] != null)
+            {
+                textBox1.Text = richTextBox6.Lines[1];
+            }
+            else
+            {
+                goto next;
+            }
+            string path = textBox1.Text;
+            string[] files = Directory.GetFiles(path, textBox2.Text);
+            string lastModifiedFile = files.OrderByDescending(f => new FileInfo(f).LastWriteTime).First();
+            path = lastModifiedFile;
+            // Read all lines in .log file, find lines that contain any word in richtextbox4 and display them in a Richtextbox1
+            string[] lines = System.IO.File.ReadAllLines(path);
+            try
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+
+                    for (int x = 0; x < warrnings.Length; x++)
+                    {
+                        string liney = warrnings.GetValue(x).ToString();
+                        if (lines[i].Contains(liney))
+                        {
+                            richTextBox1.Text += lines[i] + Environment.NewLine;
+                        }
+                    }
+                }
+                if (richTextBox2.Text == "")
+                {
+                    richTextBox2.Text = richTextBox1.Text;
+                }
+                else
+                {
+                    goto next;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            next:;
+            FindNewWarrnings();
         }
 
         private void NewFindWarrnings()

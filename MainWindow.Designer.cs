@@ -56,24 +56,22 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(830, 442);
+            this.richTextBox1.Location = new System.Drawing.Point(768, 442);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(25, 62);
+            this.richTextBox1.Size = new System.Drawing.Size(25, 14);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 53);
+            this.textBox1.Location = new System.Drawing.Point(93, 489);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(616, 20);
+            this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs";
             // 
             // button1
             // 
@@ -90,7 +88,7 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(799, 442);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(25, 62);
+            this.richTextBox2.Size = new System.Drawing.Size(25, 14);
             this.richTextBox2.TabIndex = 3;
             this.richTextBox2.Text = "";
             // 
@@ -117,7 +115,7 @@
             // 
             // DisWebUrlTestButton
             // 
-            this.DisWebUrlTestButton.Location = new System.Drawing.Point(529, 138);
+            this.DisWebUrlTestButton.Location = new System.Drawing.Point(549, 210);
             this.DisWebUrlTestButton.Name = "DisWebUrlTestButton";
             this.DisWebUrlTestButton.Size = new System.Drawing.Size(75, 23);
             this.DisWebUrlTestButton.TabIndex = 6;
@@ -127,9 +125,9 @@
             // 
             // richTextBox3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(434, 213);
+            this.richTextBox3.Location = new System.Drawing.Point(12, 313);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(199, 223);
+            this.richTextBox3.Size = new System.Drawing.Size(621, 123);
             this.richTextBox3.TabIndex = 7;
             this.richTextBox3.Text = "";
             // 
@@ -140,16 +138,16 @@
             // 
             // richTextBox4
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(727, 440);
+            this.richTextBox4.Location = new System.Drawing.Point(93, 451);
             this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(38, 64);
+            this.richTextBox4.Size = new System.Drawing.Size(27, 24);
             this.richTextBox4.TabIndex = 9;
             this.richTextBox4.Text = "[WARN]\n[ERROR]\ncheat";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(300, 168);
+            this.checkBox1.Location = new System.Drawing.Point(298, 254);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(74, 17);
             this.checkBox1.TabIndex = 10;
@@ -168,7 +166,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(478, 197);
+            this.label2.Location = new System.Drawing.Point(284, 297);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 12;
@@ -185,19 +183,19 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(36, 138);
+            this.textBox3.Location = new System.Drawing.Point(12, 213);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(487, 20);
+            this.textBox3.Size = new System.Drawing.Size(531, 20);
             this.textBox3.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(264, 122);
+            this.label4.Location = new System.Drawing.Point(267, 199);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 13);
+            this.label4.Size = new System.Drawing.Size(121, 13);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Discord Webhook URL";
+            this.label4.Text = "Discord Webhook URL:";
             // 
             // textBox4
             // 
@@ -266,45 +264,36 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(246, 96);
+            this.textBox2.Location = new System.Drawing.Point(277, 172);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 20);
+            this.textBox2.Size = new System.Drawing.Size(117, 20);
             this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Torch*.log, \nAdminLog*.log";
+            this.textBox2.Text = "Torch*.log";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(297, 79);
+            this.label9.Location = new System.Drawing.Point(295, 156);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 26;
-            this.label9.Text = "Log File name";
+            this.label9.Text = "Log File name:";
             // 
             // richTextBox6
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(12, 213);
+            this.richTextBox6.Location = new System.Drawing.Point(12, 56);
             this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(199, 223);
+            this.richTextBox6.Size = new System.Drawing.Size(621, 88);
             this.richTextBox6.TabIndex = 27;
             this.richTextBox6.Text = "C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs\nC:\\Users" +
-    "\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs2";
-            // 
-            // richTextBox7
-            // 
-            this.richTextBox7.Location = new System.Drawing.Point(217, 213);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(199, 223);
-            this.richTextBox7.TabIndex = 28;
-            this.richTextBox7.Text = "Torch*.log\nAdminLog*.log";
+    "\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs2\n3\n4\n5\n6";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 514);
-            this.Controls.Add(this.richTextBox7);
             this.Controls.Add(this.richTextBox6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox2);
@@ -368,7 +357,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RichTextBox richTextBox7;
     }
 }
 
