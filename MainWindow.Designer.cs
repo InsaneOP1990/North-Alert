@@ -56,6 +56,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -287,13 +289,31 @@
             this.richTextBox6.Size = new System.Drawing.Size(621, 88);
             this.richTextBox6.TabIndex = 27;
             this.richTextBox6.Text = "C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs\nC:\\Users" +
-    "\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs2\n3\n4\n5\n6";
+    "\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs2";
+            // 
+            // richTextBox9
+            // 
+            this.richTextBox9.Location = new System.Drawing.Point(799, 461);
+            this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.Size = new System.Drawing.Size(25, 14);
+            this.richTextBox9.TabIndex = 29;
+            this.richTextBox9.Text = "";
+            // 
+            // richTextBox8
+            // 
+            this.richTextBox8.Location = new System.Drawing.Point(768, 461);
+            this.richTextBox8.Name = "richTextBox8";
+            this.richTextBox8.Size = new System.Drawing.Size(25, 14);
+            this.richTextBox8.TabIndex = 28;
+            this.richTextBox8.Text = "";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 514);
+            this.Controls.Add(this.richTextBox9);
+            this.Controls.Add(this.richTextBox8);
             this.Controls.Add(this.richTextBox6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox2);
@@ -357,6 +377,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.RichTextBox richTextBox8;
     }
 }
 
