@@ -27,18 +27,8 @@ namespace TestReadText
             InitializeComponent();
         }
         private void button1_Click(object sender, EventArgs e)
-
         {
-            string path = @"C:\Users\Insane\Desktop\Space Engneering Stuff GG life\Torch-Server\Logs\Torch-2023-03-08.txt";
-            // read .log file and display it in a textbox
-            using (StreamReader sr = new StreamReader(path))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    richTextBox2.Text += line + Environment.NewLine;
-                }
-            }
+        //Old Button
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -134,9 +124,7 @@ namespace TestReadText
                             }
                             catch (Exception)
                             {
-                            }
-
-                
+                            }  
             }
             FindNewWarrnings();
         }
@@ -201,7 +189,7 @@ namespace TestReadText
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            //Old Button
         }
         private void button4_Click(object sender, EventArgs e)
         {
@@ -212,7 +200,7 @@ namespace TestReadText
         {
             if (checkBox1.Checked == true)
             {
-                NewFindWarrnings();
+                FindWarrnings();
             }
         }
 
@@ -245,9 +233,6 @@ namespace TestReadText
                 SendMessage(msg);
                 Thread.Sleep(5000);
             }
-
-
-
         }
 
         private void SendMessage(string msg)
@@ -281,14 +266,5 @@ namespace TestReadText
             }
 
         }
-        class Queue
-    {
-            public static void Enqueue(string msg)
-        {
-                ArrayList msgque = new ArrayList();
-                msgque.Add(msg);
-            }
-
-    }
 }
 
