@@ -206,9 +206,7 @@ namespace TestReadText
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
                 timer1.Start();
-
             //load settings
             textBox3.Text = NorthAlert.Properties.Settings.Default.DisURL;
             textBox1.Text = NorthAlert.Properties.Settings.Default.Logs;
@@ -256,8 +254,13 @@ namespace TestReadText
                 MessageBox.Show(e.Message);
             }
         }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer1.Stop();
         }
-        class Http
+    }
+    class Http
         {
             public static byte[] Post(string uri, NameValueCollection pairs)
             {

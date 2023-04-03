@@ -34,9 +34,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.DisWebUrlTestButton = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
@@ -94,15 +94,15 @@
             this.richTextBox2.TabIndex = 3;
             this.richTextBox2.Text = "";
             // 
-            // button2
+            // SaveButton
             // 
-            this.button2.Location = new System.Drawing.Point(273, 452);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 57);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Save Settings";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.SaveButton.Location = new System.Drawing.Point(273, 452);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(202, 57);
+            this.SaveButton.TabIndex = 4;
+            this.SaveButton.Text = "Save Settings";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -115,15 +115,15 @@
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // DisWebUrlTestButton
             // 
-            this.button4.Location = new System.Drawing.Point(529, 138);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Check URL";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.DisWebUrlTestButton.Location = new System.Drawing.Point(529, 138);
+            this.DisWebUrlTestButton.Name = "DisWebUrlTestButton";
+            this.DisWebUrlTestButton.Size = new System.Drawing.Size(75, 23);
+            this.DisWebUrlTestButton.TabIndex = 6;
+            this.DisWebUrlTestButton.Text = "Check URL";
+            this.DisWebUrlTestButton.UseVisualStyleBackColor = true;
+            this.DisWebUrlTestButton.Click += new System.EventHandler(this.button4_Click);
             // 
             // richTextBox3
             // 
@@ -323,9 +323,9 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.richTextBox4);
             this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.DisWebUrlTestButton);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -333,6 +333,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Text = "North Alert";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -345,9 +346,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button DisWebUrlTestButton;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.RichTextBox richTextBox4;
