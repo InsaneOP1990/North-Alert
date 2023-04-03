@@ -44,8 +44,9 @@ namespace TestReadText
             NorthAlert.Properties.Settings.Default.Save();
         }
 
-        private void FindWarrnings()
+        private void FindWarrnings0()
         {
+            timer1.Stop();
             Array warrnings = richTextBox4.Lines;
             richTextBox1.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
@@ -79,7 +80,7 @@ namespace TestReadText
                 }
                 if (richTextBox2.Text == "")
                 {
-                    richTextBox2.Text += richTextBox1.Text;
+                    richTextBox2.Text = richTextBox1.Text;
                 }
                 else
                 {
@@ -90,9 +91,70 @@ namespace TestReadText
             {
             }
             next:;
-            FindNewWarrnings();
+            FindNewWarrnings0();
         }
-        private void FindWarrnings2()
+        private void FindNewWarrnings0()
+        {
+
+            //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
+            if (richTextBox1.Text == "") 
+            { 
+            richTextBox2.Text = richTextBox1.Text;
+            }
+            if (richTextBox2.Text == "")
+            {
+                richTextBox2.Text = richTextBox1.Text;
+            }
+              
+            Array warrnings2 = richTextBox4.Lines;
+            //trim richtextbox1 by removing all lines that are in richtextbox2 then display the rest that contain "[WARN]" in richtextbox3
+            string[] lines = richTextBox1.Lines;
+            string[] lines2 = richTextBox2.Lines;
+            int test = lines2.Length;
+            int test2 = test -= 2;
+            if (richTextBox2.Text != richTextBox1.Text)
+                try
+                {
+                    try
+                    {
+                        for (int x = 0; x < warrnings2.Length; x++)
+                        {
+                            string liney = warrnings2.GetValue(x).ToString();
+                            string line3 = lines2.GetValue(test2).ToString();
+                            int index = Array.FindIndex(lines, line => line.Contains(line3));
+                            for (int i = index; i < lines.Length; i++)
+                            {
+                                if (lines[i].Contains(liney))
+                                {
+                                    if (lines[i] != line3)
+                                    {
+                                        richTextBox3.Text += richTextBox7.Lines[0] + ": " + lines[i] + Environment.NewLine;
+                                        MsgQue(richTextBox7.Lines[0] + ": " + lines[i]);
+                                        richTextBox2.Text = richTextBox1.Text;
+                                        //every 100 lines clear richtextbox3
+                                        if (richTextBox3.Lines.Length > 100)
+                                        {
+                                            richTextBox3.Text = "";
+                                        }
+                                    }
+
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+
+                    catch (Exception)
+                    {
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+            FindWarrnings1();
+        }
+        private void FindWarrnings1()
         {
             Array warrnings = richTextBox4.Lines;
             richTextBox8.Text = "";
@@ -138,114 +200,9 @@ namespace TestReadText
             {
             }
             next:;
-            FindNewWarrnings2();
+            FindNewWarrnings1();
         }
-
-        private void NewFindWarrnings()
-        {
-            //same as FindWarrnings() but checks multiple .log files in multiple directories
-            timer1.Stop();
-            Array warrnings = richTextBox4.Lines;
-            richTextBox1.Text = "";
-            string[] directories = richTextBox6.Lines;
-            foreach (string dir in directories)
-            {
-                    //foreach file in dir if filename contains any word in richtextbox7 
-
-                    string path = dir;
-
-                    string[] files = Directory.GetFiles(path, textBox2.Text);
-                            string lastModifiedFile = files.OrderByDescending(f => new FileInfo(f).LastWriteTime).First();
-                            path = lastModifiedFile;
-                            // Read all lines in .log file, find line that contain any word in richtextbox4 and display them in a Richtextbox1
-                            string[] lines = System.IO.File.ReadAllLines(path);
-                            //int index = Array.FindIndex(lines, line => line.Contains("[WARN]"));
-                            try
-                            {
-                                for (int i = 0; i < lines.Length; i++)
-                                {
-                                    for (int x = 0; x < warrnings.Length; x++)
-                                    {
-                                        string liney = warrnings.GetValue(x).ToString();
-                                        if (lines[i].Contains(liney))
-                                        {
-                                            richTextBox1.Text += lines[i] + Environment.NewLine;
-                                        }
-                                    }
-                                }
-                                if (richTextBox2.Text == "")
-                                {
-                                    richTextBox2.Text += richTextBox1.Text;
-                                }
-                            }
-                            catch (Exception)
-                            {
-                            }  
-            }
-            FindNewWarrnings();
-        }
-        private void FindNewWarrnings()
-        {
-
-            //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
-            if (richTextBox1.Text == "") 
-            { 
-            richTextBox2.Text = richTextBox1.Text;
-            }
-            if (richTextBox2.Text == "")
-            {
-                richTextBox2.Text += richTextBox1.Text;
-            }
-              
-            Array warrnings2 = richTextBox4.Lines;
-            //trim richtextbox1 by removing all lines that are in richtextbox2 then display the rest that contain "[WARN]" in richtextbox3
-            string[] lines = richTextBox1.Lines;
-            string[] lines2 = richTextBox2.Lines;
-            int test = lines2.Length;
-            int test2 = test -= 2;
-            if (richTextBox2.Text != richTextBox1.Text)
-                try
-                {
-                    try
-                    {
-                        for (int x = 0; x < warrnings2.Length; x++)
-                        {
-                            string liney = warrnings2.GetValue(x).ToString();
-                            string line3 = lines2.GetValue(test2).ToString();
-                            int index = Array.FindIndex(lines, line => line.Contains(line3));
-                            for (int i = index; i < lines.Length; i++)
-                            {
-                                if (lines[i].Contains(liney))
-                                {
-                                    if (lines[i] != line3)
-                                    {
-                                        richTextBox3.Text += lines[i] + Environment.NewLine;
-                                        MsgQue(lines[i]);
-                                        richTextBox2.Text = richTextBox1.Text;
-                                        //every 100 lines clear richtextbox3
-                                        if (richTextBox3.Lines.Length > 100)
-                                        {
-                                            richTextBox3.Text = "";
-                                        }
-                                    }
-
-                                    continue;
-                                }
-                            }
-                        }
-                    }
-
-                    catch (Exception)
-                    {
-                    }
-                }
-                catch (Exception)
-                {
-                }
-
-            FindWarrnings2();
-        }
-        private void FindNewWarrnings2()
+        private void FindNewWarrnings1()
         {
 
             //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
@@ -255,7 +212,7 @@ namespace TestReadText
             }
             if (richTextBox9.Text == "")
             {
-                richTextBox9.Text += richTextBox8.Text;
+                richTextBox9.Text = richTextBox8.Text;
             }
 
             Array warrnings2 = richTextBox4.Lines;
@@ -280,9 +237,446 @@ namespace TestReadText
                                 {
                                     if (lines[i] != line3)
                                     {
-                                        richTextBox3.Text += lines[i] + Environment.NewLine;
-                                        MsgQue(lines[i]);
+                                        richTextBox3.Text += richTextBox7.Lines[1] + ": " + lines[i] + Environment.NewLine;
+                                        MsgQue(richTextBox7.Lines[1] + ": " + lines[i]);
                                         richTextBox9.Text = richTextBox8.Text;
+                                        //every 100 lines clear richtextbox3
+                                        if (richTextBox3.Lines.Length > 100)
+                                        {
+                                            richTextBox3.Text = "";
+                                        }
+                                    }
+
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+
+                    catch (Exception)
+                    {
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+            FindWarrnings2();
+        }
+
+        private void FindWarrnings2()
+        {
+            Array warrnings = richTextBox4.Lines;
+            richTextBox11.Text = "";
+            //find last motified .log file in directory that has "Torch" in the name
+            if (richTextBox6.Lines[2] != null)
+            {
+                textBox1.Text = richTextBox6.Lines[2];
+            }
+            else
+            {
+                goto next;
+            }
+            string path = textBox1.Text;
+            string[] files = Directory.GetFiles(path, textBox2.Text);
+            string lastModifiedFile = files.OrderByDescending(f => new FileInfo(f).LastWriteTime).First();
+            path = lastModifiedFile;
+            // Read all lines in .log file, find lines that contain any word in richtextbox4 and display them in a Richtextbox1
+            string[] lines = System.IO.File.ReadAllLines(path);
+            try
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+
+                    for (int x = 0; x < warrnings.Length; x++)
+                    {
+                        string liney = warrnings.GetValue(x).ToString();
+                        if (lines[i].Contains(liney))
+                        {
+                            richTextBox11.Text += lines[i] + Environment.NewLine;
+                        }
+                    }
+                }
+                if (richTextBox12.Text == "")
+                {
+                    richTextBox12.Text = richTextBox11.Text;
+                }
+                else
+                {
+                    goto next;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            next:;
+            FindNewWarrnings2();
+        }
+        private void FindNewWarrnings2()
+        {
+
+            //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
+            if (richTextBox11.Text == "")
+            {
+                richTextBox12.Text = richTextBox11.Text;
+            }
+            if (richTextBox12.Text == "")
+            {
+                richTextBox12.Text = richTextBox11.Text;
+            }
+
+            Array warrnings2 = richTextBox4.Lines;
+            //trim richtextbox1 by removing all lines that are in richtextbox2 then display the rest that contain "[WARN]" in richtextbox3
+            string[] lines = richTextBox11.Lines;
+            string[] lines2 = richTextBox12.Lines;
+            int test = lines2.Length;
+            int test2 = test -= 2;
+            if (richTextBox12.Text != richTextBox11.Text)
+                try
+                {
+                    try
+                    {
+                        for (int x = 0; x < warrnings2.Length; x++)
+                        {
+                            string liney = warrnings2.GetValue(x).ToString();
+                            string line3 = lines2.GetValue(test2).ToString();
+                            int index = Array.FindIndex(lines, line => line.Contains(line3));
+                            for (int i = index; i < lines.Length; i++)
+                            {
+                                if (lines[i].Contains(liney))
+                                {
+                                    if (lines[i] != line3)
+                                    {
+                                        richTextBox3.Text += richTextBox7.Lines[2] + ": " + lines[i] + Environment.NewLine;
+                                        MsgQue(richTextBox7.Lines[2] + ": " + lines[i]);
+                                        richTextBox12.Text = richTextBox11.Text;
+                                        //every 100 lines clear richtextbox3
+                                        if (richTextBox3.Lines.Length > 100)
+                                        {
+                                            richTextBox3.Text = "";
+                                        }
+                                    }
+
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+
+                    catch (Exception)
+                    {
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+            FindWarrnings3();
+        }
+        private void FindWarrnings3()
+        {
+            Array warrnings = richTextBox4.Lines;
+            richTextBox13.Text = "";
+            //find last motified .log file in directory that has "Torch" in the name
+            if (richTextBox6.Lines[3] != null)
+            {
+                textBox1.Text = richTextBox6.Lines[3];
+            }
+            else
+            {
+                goto next;
+            }
+            string path = textBox1.Text;
+            string[] files = Directory.GetFiles(path, textBox2.Text);
+            string lastModifiedFile = files.OrderByDescending(f => new FileInfo(f).LastWriteTime).First();
+            path = lastModifiedFile;
+            // Read all lines in .log file, find lines that contain any word in richtextbox4 and display them in a Richtextbox1
+            string[] lines = System.IO.File.ReadAllLines(path);
+            try
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+
+                    for (int x = 0; x < warrnings.Length; x++)
+                    {
+                        string liney = warrnings.GetValue(x).ToString();
+                        if (lines[i].Contains(liney))
+                        {
+                            richTextBox13.Text += lines[i] + Environment.NewLine;
+                        }
+                    }
+                }
+                if (richTextBox14.Text == "")
+                {
+                    richTextBox14.Text = richTextBox13.Text;
+                }
+                else
+                {
+                    goto next;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            next:;
+            FindNewWarrnings3();
+        }
+        private void FindNewWarrnings3()
+        {
+
+            //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
+            if (richTextBox13.Text == "")
+            {
+                richTextBox14.Text = richTextBox13.Text;
+            }
+            if (richTextBox14.Text == "")
+            {
+                richTextBox14.Text = richTextBox13.Text;
+            }
+
+            Array warrnings2 = richTextBox4.Lines;
+            //trim richtextbox1 by removing all lines that are in richtextbox2 then display the rest that contain "[WARN]" in richtextbox3
+            string[] lines = richTextBox13.Lines;
+            string[] lines2 = richTextBox14.Lines;
+            int test = lines2.Length;
+            int test2 = test -= 2;
+            if (richTextBox14.Text != richTextBox13.Text)
+                try
+                {
+                    try
+                    {
+                        for (int x = 0; x < warrnings2.Length; x++)
+                        {
+                            string liney = warrnings2.GetValue(x).ToString();
+                            string line3 = lines2.GetValue(test2).ToString();
+                            int index = Array.FindIndex(lines, line => line.Contains(line3));
+                            for (int i = index; i < lines.Length; i++)
+                            {
+                                if (lines[i].Contains(liney))
+                                {
+                                    if (lines[i] != line3)
+                                    {
+                                        richTextBox3.Text += richTextBox7.Lines[3] + ": " + lines[i] + Environment.NewLine;
+                                        MsgQue(richTextBox7.Lines[3] + ": " + lines[i]);
+                                        richTextBox14.Text = richTextBox13.Text;
+                                        //every 100 lines clear richtextbox3
+                                        if (richTextBox3.Lines.Length > 100)
+                                        {
+                                            richTextBox3.Text = "";
+                                        }
+                                    }
+
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+
+                    catch (Exception)
+                    {
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+            FindWarrnings4();
+        }
+        private void FindWarrnings4()
+        {
+            Array warrnings = richTextBox4.Lines;
+            richTextBox15.Text = "";
+            //find last motified .log file in directory that has "Torch" in the name
+            if (richTextBox6.Lines[4] != null)
+            {
+                textBox1.Text = richTextBox6.Lines[4];
+            }
+            else
+            {
+                goto next;
+            }
+            string path = textBox1.Text;
+            string[] files = Directory.GetFiles(path, textBox2.Text);
+            string lastModifiedFile = files.OrderByDescending(f => new FileInfo(f).LastWriteTime).First();
+            path = lastModifiedFile;
+            // Read all lines in .log file, find lines that contain any word in richtextbox4 and display them in a Richtextbox1
+            string[] lines = System.IO.File.ReadAllLines(path);
+            try
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+
+                    for (int x = 0; x < warrnings.Length; x++)
+                    {
+                        string liney = warrnings.GetValue(x).ToString();
+                        if (lines[i].Contains(liney))
+                        {
+                            richTextBox15.Text += lines[i] + Environment.NewLine;
+                        }
+                    }
+                }
+                if (richTextBox16.Text == "")
+                {
+                    richTextBox16.Text = richTextBox15.Text;
+                }
+                else
+                {
+                    goto next;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            next:;
+            FindNewWarrnings4();
+        }
+        private void FindNewWarrnings4()
+        {
+
+            //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
+            if (richTextBox15.Text == "")
+            {
+                richTextBox16.Text = richTextBox15.Text;
+            }
+            if (richTextBox16.Text == "")
+            {
+                richTextBox16.Text = richTextBox15.Text;
+            }
+
+            Array warrnings2 = richTextBox4.Lines;
+            //trim richtextbox1 by removing all lines that are in richtextbox2 then display the rest that contain "[WARN]" in richtextbox3
+            string[] lines = richTextBox15.Lines;
+            string[] lines2 = richTextBox16.Lines;
+            int test = lines2.Length;
+            int test2 = test -= 2;
+            if (richTextBox16.Text != richTextBox15.Text)
+                try
+                {
+                    try
+                    {
+                        for (int x = 0; x < warrnings2.Length; x++)
+                        {
+                            string liney = warrnings2.GetValue(x).ToString();
+                            string line3 = lines2.GetValue(test2).ToString();
+                            int index = Array.FindIndex(lines, line => line.Contains(line3));
+                            for (int i = index; i < lines.Length; i++)
+                            {
+                                if (lines[i].Contains(liney))
+                                {
+                                    if (lines[i] != line3)
+                                    {
+                                        richTextBox3.Text += richTextBox7.Lines[4] + ": " + lines[i] + Environment.NewLine;
+                                        MsgQue(richTextBox7.Lines[4] + ": " + lines[i]);
+                                        richTextBox16.Text = richTextBox15.Text;
+                                        //every 100 lines clear richtextbox3
+                                        if (richTextBox3.Lines.Length > 100)
+                                        {
+                                            richTextBox3.Text = "";
+                                        }
+                                    }
+
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+
+                    catch (Exception)
+                    {
+                    }
+                }
+                catch (Exception)
+                {
+                }
+
+            FindWarrnings5();
+        }
+        private void FindWarrnings5()
+        {
+            Array warrnings = richTextBox4.Lines;
+            richTextBox17.Text = "";
+            //find last motified .log file in directory that has "Torch" in the name
+            if (richTextBox6.Lines[5] != null)
+            {
+                textBox1.Text = richTextBox6.Lines[5];
+            }
+            else
+            {
+                goto next;
+            }
+            string path = textBox1.Text;
+            string[] files = Directory.GetFiles(path, textBox2.Text);
+            string lastModifiedFile = files.OrderByDescending(f => new FileInfo(f).LastWriteTime).First();
+            path = lastModifiedFile;
+            // Read all lines in .log file, find lines that contain any word in richtextbox4 and display them in a Richtextbox1
+            string[] lines = System.IO.File.ReadAllLines(path);
+            try
+            {
+                for (int i = 0; i < lines.Length; i++)
+                {
+
+                    for (int x = 0; x < warrnings.Length; x++)
+                    {
+                        string liney = warrnings.GetValue(x).ToString();
+                        if (lines[i].Contains(liney))
+                        {
+                            richTextBox17.Text += lines[i] + Environment.NewLine;
+                        }
+                    }
+                }
+                if (richTextBox18.Text == "")
+                {
+                    richTextBox18.Text = richTextBox17.Text;
+                }
+                else
+                {
+                    goto next;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            next:;
+            FindNewWarrnings5();
+        }
+        private void FindNewWarrnings5()
+        {
+
+            //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
+            if (richTextBox17.Text == "")
+            {
+                richTextBox18.Text = richTextBox17.Text;
+            }
+            if (richTextBox18.Text == "")
+            {
+                richTextBox18.Text = richTextBox17.Text;
+            }
+
+            Array warrnings2 = richTextBox4.Lines;
+            //trim richtextbox1 by removing all lines that are in richtextbox2 then display the rest that contain "[WARN]" in richtextbox3
+            string[] lines = richTextBox17.Lines;
+            string[] lines2 = richTextBox18.Lines;
+            int test = lines2.Length;
+            int test2 = test -= 2;
+            if (richTextBox18.Text != richTextBox17.Text)
+                try
+                {
+                    try
+                    {
+                        for (int x = 0; x < warrnings2.Length; x++)
+                        {
+                            string liney = warrnings2.GetValue(x).ToString();
+                            string line3 = lines2.GetValue(test2).ToString();
+                            int index = Array.FindIndex(lines, line => line.Contains(line3));
+                            for (int i = index; i < lines.Length; i++)
+                            {
+                                if (lines[i].Contains(liney))
+                                {
+                                    if (lines[i] != line3)
+                                    {
+                                        richTextBox3.Text += richTextBox7.Lines[5] + ": " + lines[i] + Environment.NewLine;
+                                        MsgQue(richTextBox7.Lines[5] + ": " + lines[i]);
+                                        richTextBox18.Text = richTextBox17.Text;
                                         //every 100 lines clear richtextbox3
                                         if (richTextBox3.Lines.Length > 100)
                                         {
@@ -319,7 +713,7 @@ namespace TestReadText
         {
             if (checkBox1.Checked == true)
             {
-                FindWarrnings();
+                FindWarrnings0();
             }
         }
 
