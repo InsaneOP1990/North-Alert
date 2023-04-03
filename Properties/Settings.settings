@@ -1,0 +1,29 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NorthAlert.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Logs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Insane\Desktop\Space Engneering Stuff GG life\Torch-Server\Logs</Value>
+    </Setting>
+    <Setting Name="DisURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="botname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GG Lobby</Value>
+    </Setting>
+    <Setting Name="Botpic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://img1.wsimg.com/isteam/ip/b4b9be8a-8d11-4a70-bf87-031e19961b95/profile4.png</Value>
+    </Setting>
+    <Setting Name="Keywords" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[WARN]
+[ERROR]
+cheat</Value>
+    </Setting>
+    <Setting Name="Autorun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="logname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Torch*.log</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
