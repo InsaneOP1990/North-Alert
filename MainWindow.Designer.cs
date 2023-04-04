@@ -71,6 +71,7 @@
             this.richTextBox16 = new System.Windows.Forms.RichTextBox();
             this.richTextBox17 = new System.Windows.Forms.RichTextBox();
             this.richTextBox18 = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -130,7 +131,7 @@
             // 
             // DisWebUrlTestButton
             // 
-            this.DisWebUrlTestButton.Location = new System.Drawing.Point(549, 210);
+            this.DisWebUrlTestButton.Location = new System.Drawing.Point(549, 193);
             this.DisWebUrlTestButton.Name = "DisWebUrlTestButton";
             this.DisWebUrlTestButton.Size = new System.Drawing.Size(75, 23);
             this.DisWebUrlTestButton.TabIndex = 6;
@@ -162,7 +163,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(253, 255);
+            this.checkBox1.Location = new System.Drawing.Point(656, 127);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(74, 17);
             this.checkBox1.TabIndex = 10;
@@ -190,7 +191,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 40);
+            this.label3.Location = new System.Drawing.Point(196, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 13);
             this.label3.TabIndex = 13;
@@ -198,7 +199,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 213);
+            this.textBox3.Location = new System.Drawing.Point(12, 196);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(531, 20);
             this.textBox3.TabIndex = 14;
@@ -206,7 +207,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(229, 197);
+            this.label4.Location = new System.Drawing.Point(229, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 13);
             this.label4.TabIndex = 15;
@@ -271,15 +272,15 @@
             // 
             // richTextBox5
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(695, 213);
+            this.richTextBox5.Location = new System.Drawing.Point(695, 212);
             this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(175, 223);
+            this.richTextBox5.Size = new System.Drawing.Size(175, 297);
             this.richTextBox5.TabIndex = 24;
             this.richTextBox5.Text = "[FATAL]\n[WARN]\n[ERROR]\ncheat";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(232, 166);
+            this.textBox2.Location = new System.Drawing.Point(233, 54);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(117, 20);
             this.textBox2.TabIndex = 25;
@@ -289,7 +290,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(250, 150);
+            this.label9.Location = new System.Drawing.Point(251, 38);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 26;
@@ -297,7 +298,7 @@
             // 
             // richTextBox6
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(12, 56);
+            this.richTextBox6.Location = new System.Drawing.Point(12, 89);
             this.richTextBox6.Name = "richTextBox6";
             this.richTextBox6.Size = new System.Drawing.Size(499, 88);
             this.richTextBox6.TabIndex = 27;
@@ -322,9 +323,9 @@
             // 
             // richTextBox7
             // 
-            this.richTextBox7.Location = new System.Drawing.Point(517, 56);
+            this.richTextBox7.Location = new System.Drawing.Point(517, 89);
             this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(116, 88);
+            this.richTextBox7.Size = new System.Drawing.Size(107, 88);
             this.richTextBox7.TabIndex = 30;
             this.richTextBox7.Text = "GG Lobby\nGG Server 1\nGG Server 2\nGG Server 3\nGG Server 4\nGG Server 5";
             // 
@@ -332,9 +333,9 @@
             // 
             this.richTextBox10.Location = new System.Drawing.Point(876, 213);
             this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(175, 223);
+            this.richTextBox10.Size = new System.Drawing.Size(175, 296);
             this.richTextBox10.TabIndex = 32;
-            this.richTextBox10.Text = "943287503534845953";
+            this.richTextBox10.Text = "106210818042937344";
             // 
             // label10
             // 
@@ -427,11 +428,21 @@
             this.richTextBox18.TabIndex = 41;
             this.richTextBox18.Text = "";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(514, 73);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 13);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "File description";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 514);
+            this.ClientSize = new System.Drawing.Size(1113, 605);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.richTextBox17);
             this.Controls.Add(this.richTextBox18);
             this.Controls.Add(this.richTextBox15);
@@ -525,6 +536,7 @@
         private System.Windows.Forms.RichTextBox richTextBox16;
         private System.Windows.Forms.RichTextBox richTextBox17;
         private System.Windows.Forms.RichTextBox richTextBox18;
+        private System.Windows.Forms.Label label13;
     }
 }
 

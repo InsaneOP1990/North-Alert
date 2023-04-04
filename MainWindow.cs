@@ -50,7 +50,7 @@ namespace TestReadText
             Array warrnings = richTextBox4.Lines;
             richTextBox1.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
-            if (richTextBox6.Lines[0] != null)
+            if (richTextBox6.Lines.Length > 0)
             {
                 textBox1.Text = richTextBox6.Lines[0];
             }
@@ -112,9 +112,6 @@ namespace TestReadText
             string[] lines2 = richTextBox2.Lines;
             int test = lines2.Length;
             int test2 = test -= 2;
-            if (richTextBox2.Text != richTextBox1.Text)
-                try
-                {
                     try
                     {
                         for (int x = 0; x < warrnings2.Length; x++)
@@ -129,16 +126,14 @@ namespace TestReadText
                                     if (lines[i] != line3)
                                     {
                                         richTextBox3.Text += richTextBox7.Lines[0] + ": " + lines[i] + Environment.NewLine;
-                                        MsgQue(richTextBox7.Lines[0] + ": " + lines[i]);
                                         richTextBox2.Text = richTextBox1.Text;
+                                        MsgQue(richTextBox7.Lines[0] + ": " + lines[i]);
                                         //every 100 lines clear richtextbox3
                                         if (richTextBox3.Lines.Length > 100)
                                         {
                                             richTextBox3.Text = "";
                                         }
                                     }
-
-                                    continue;
                                 }
                             }
                         }
@@ -147,19 +142,14 @@ namespace TestReadText
                     catch (Exception)
                     {
                     }
-                }
-                catch (Exception)
-                {
-                }
-
-            FindWarrnings1();
+                FindWarrnings1();
         }
         private void FindWarrnings1()
         {
             Array warrnings = richTextBox4.Lines;
             richTextBox8.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
-            if (richTextBox6.Lines[1] != null)
+            if (richTextBox6.Lines.Length > 1)
             {
                 textBox1.Text = richTextBox6.Lines[1];
             }
@@ -206,10 +196,10 @@ namespace TestReadText
         {
 
             //Incase richtextbox1 is empty, set richtextbox2 to richtextbox1 / this can Happen at Midnight when the server restarts
-            if (richTextBox8.Text == "")
-            {
-                richTextBox9.Text = richTextBox8.Text;
-            }
+            //if (richTextBox8.Text == "")
+            //{
+            //    richTextBox9.Text = richTextBox8.Text;
+            //}
             if (richTextBox9.Text == "")
             {
                 richTextBox9.Text = richTextBox8.Text;
@@ -221,47 +211,38 @@ namespace TestReadText
             string[] lines2 = richTextBox9.Lines;
             int test = lines2.Length;
             int test2 = test -= 2;
-            if (richTextBox9.Text != richTextBox8.Text)
                 try
                 {
-                    try
+                    for (int x = 0; x < warrnings2.Length; x++)
                     {
-                        for (int x = 0; x < warrnings2.Length; x++)
+                        string liney = warrnings2.GetValue(x).ToString();
+                        string line3 = lines2.GetValue(test2).ToString();
+                        int index = Array.FindIndex(lines, line => line.Contains(line3));
+                        for (int i = index; i < lines.Length; i++)
                         {
-                            string liney = warrnings2.GetValue(x).ToString();
-                            string line3 = lines2.GetValue(test2).ToString();
-                            int index = Array.FindIndex(lines, line => line.Contains(line3));
-                            for (int i = index; i < lines.Length; i++)
+                            if (lines[i].Contains(liney))
                             {
-                                if (lines[i].Contains(liney))
+                                if (lines[i] != line3)
                                 {
-                                    if (lines[i] != line3)
+                                    richTextBox3.Text += richTextBox7.Lines[1] + ": " + lines[i] + Environment.NewLine;
+                                    richTextBox9.Text = richTextBox8.Text;
+                                    MsgQue(richTextBox7.Lines[1] + ": " + lines[i]);
+                                    //every 100 lines clear richtextbox3
+                                    if (richTextBox3.Lines.Length > 100)
                                     {
-                                        richTextBox3.Text += richTextBox7.Lines[1] + ": " + lines[i] + Environment.NewLine;
-                                        MsgQue(richTextBox7.Lines[1] + ": " + lines[i]);
-                                        richTextBox9.Text = richTextBox8.Text;
-                                        //every 100 lines clear richtextbox3
-                                        if (richTextBox3.Lines.Length > 100)
-                                        {
-                                            richTextBox3.Text = "";
-                                        }
+                                        richTextBox3.Text = "";
                                     }
-
-                                    continue;
                                 }
                             }
                         }
                     }
-
-                    catch (Exception)
-                    {
-                    }
+                    FindWarrnings2();
                 }
+
                 catch (Exception)
                 {
                 }
 
-            FindWarrnings2();
         }
 
         private void FindWarrnings2()
@@ -269,7 +250,7 @@ namespace TestReadText
             Array warrnings = richTextBox4.Lines;
             richTextBox11.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
-            if (richTextBox6.Lines[2] != null)
+            if (richTextBox6.Lines.Length > 2)
             {
                 textBox1.Text = richTextBox6.Lines[2];
             }
@@ -331,9 +312,6 @@ namespace TestReadText
             string[] lines2 = richTextBox12.Lines;
             int test = lines2.Length;
             int test2 = test -= 2;
-            if (richTextBox12.Text != richTextBox11.Text)
-                try
-                {
                     try
                     {
                         for (int x = 0; x < warrnings2.Length; x++)
@@ -348,8 +326,8 @@ namespace TestReadText
                                     if (lines[i] != line3)
                                     {
                                         richTextBox3.Text += richTextBox7.Lines[2] + ": " + lines[i] + Environment.NewLine;
-                                        MsgQue(richTextBox7.Lines[2] + ": " + lines[i]);
                                         richTextBox12.Text = richTextBox11.Text;
+                                        MsgQue(richTextBox7.Lines[2] + ": " + lines[i]);
                                         //every 100 lines clear richtextbox3
                                         if (richTextBox3.Lines.Length > 100)
                                         {
@@ -366,10 +344,6 @@ namespace TestReadText
                     catch (Exception)
                     {
                     }
-                }
-                catch (Exception)
-                {
-                }
 
             FindWarrnings3();
         }
@@ -378,7 +352,7 @@ namespace TestReadText
             Array warrnings = richTextBox4.Lines;
             richTextBox13.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
-            if (richTextBox6.Lines[3] != null)
+            if (richTextBox6.Lines.Length > 3)
             {
                 textBox1.Text = richTextBox6.Lines[3];
             }
@@ -440,9 +414,6 @@ namespace TestReadText
             string[] lines2 = richTextBox14.Lines;
             int test = lines2.Length;
             int test2 = test -= 2;
-            if (richTextBox14.Text != richTextBox13.Text)
-                try
-                {
                     try
                     {
                         for (int x = 0; x < warrnings2.Length; x++)
@@ -457,8 +428,8 @@ namespace TestReadText
                                     if (lines[i] != line3)
                                     {
                                         richTextBox3.Text += richTextBox7.Lines[3] + ": " + lines[i] + Environment.NewLine;
-                                        MsgQue(richTextBox7.Lines[3] + ": " + lines[i]);
                                         richTextBox14.Text = richTextBox13.Text;
+                                        MsgQue(richTextBox7.Lines[3] + ": " + lines[i]);
                                         //every 100 lines clear richtextbox3
                                         if (richTextBox3.Lines.Length > 100)
                                         {
@@ -475,10 +446,6 @@ namespace TestReadText
                     catch (Exception)
                     {
                     }
-                }
-                catch (Exception)
-                {
-                }
 
             FindWarrnings4();
         }
@@ -487,7 +454,7 @@ namespace TestReadText
             Array warrnings = richTextBox4.Lines;
             richTextBox15.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
-            if (richTextBox6.Lines[4] != null)
+            if (richTextBox6.Lines.Length > 4)
             {
                 textBox1.Text = richTextBox6.Lines[4];
             }
@@ -549,9 +516,6 @@ namespace TestReadText
             string[] lines2 = richTextBox16.Lines;
             int test = lines2.Length;
             int test2 = test -= 2;
-            if (richTextBox16.Text != richTextBox15.Text)
-                try
-                {
                     try
                     {
                         for (int x = 0; x < warrnings2.Length; x++)
@@ -566,8 +530,9 @@ namespace TestReadText
                                     if (lines[i] != line3)
                                     {
                                         richTextBox3.Text += richTextBox7.Lines[4] + ": " + lines[i] + Environment.NewLine;
-                                        MsgQue(richTextBox7.Lines[4] + ": " + lines[i]);
                                         richTextBox16.Text = richTextBox15.Text;
+                                        MsgQue(richTextBox7.Lines[4] + ": " + lines[i]);
+
                                         //every 100 lines clear richtextbox3
                                         if (richTextBox3.Lines.Length > 100)
                                         {
@@ -584,10 +549,6 @@ namespace TestReadText
                     catch (Exception)
                     {
                     }
-                }
-                catch (Exception)
-                {
-                }
 
             FindWarrnings5();
         }
@@ -596,7 +557,7 @@ namespace TestReadText
             Array warrnings = richTextBox4.Lines;
             richTextBox17.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
-            if (richTextBox6.Lines[5] != null)
+            if (richTextBox6.Lines.Length > 5)
             {
                 textBox1.Text = richTextBox6.Lines[5];
             }
@@ -658,9 +619,6 @@ namespace TestReadText
             string[] lines2 = richTextBox18.Lines;
             int test = lines2.Length;
             int test2 = test -= 2;
-            if (richTextBox18.Text != richTextBox17.Text)
-                try
-                {
                     try
                     {
                         for (int x = 0; x < warrnings2.Length; x++)
@@ -675,8 +633,8 @@ namespace TestReadText
                                     if (lines[i] != line3)
                                     {
                                         richTextBox3.Text += richTextBox7.Lines[5] + ": " + lines[i] + Environment.NewLine;
-                                        MsgQue(richTextBox7.Lines[5] + ": " + lines[i]);
                                         richTextBox18.Text = richTextBox17.Text;
+                                        MsgQue(richTextBox7.Lines[5] + ": " + lines[i]);
                                         //every 100 lines clear richtextbox3
                                         if (richTextBox3.Lines.Length > 100)
                                         {
@@ -693,10 +651,6 @@ namespace TestReadText
                     catch (Exception)
                     {
                     }
-                }
-                catch (Exception)
-                {
-                }
 
             timer1.Start();
         }
@@ -732,29 +686,54 @@ namespace TestReadText
 
 
         }
-
+        ArrayList msgque = new ArrayList();
         private void MsgQue(string msg2)
         {
             // need to slow down messages so they dont get sent to fast, discord has a 5 second cooldown, so i need to make it so it sends 1 message every 5 seconds
             // i need to make it so it sends the first message, then waits 5 seconds, then sends the next message, then waits 5 seconds, then sends the next message, etc
-            ArrayList msgque = new ArrayList();
+            // find if msg 2 contains value from richtextbox4
+            Array warrnlist1 = richTextBox4.Lines;
+            Array warrnlist2 = richTextBox10.Lines;
             msgque.Add(msg2);
-            foreach (string msg in msgque)
+            foreach (string msg3 in msgque)
             {
-                //send message from msgque arraylist
-                SendMessage(msg);
-                //remove messages that have been sent from the msgque arraylist so it doesnt send them again when the timer ticks again in 5 seconds time
-                //wait 5 seconds
-                Thread.Sleep(5000);
+                for (int k = 0; k < warrnlist1.Length; k++)
+                {
+                    string line = warrnlist1.GetValue(k).ToString();
+
+                    if (msg3.Contains(line))
+                    {
+                        string msg01 = "<@" + warrnlist2.GetValue(k).ToString() + "> " + msg3;
+                        if (msg01.Contains("<@>"))
+                        {
+                             SendMessage(msg3);
+                             msgque.Remove(msg3);
+                             goto done;
+                        }
+                        else
+                        {
+                            SendMessage(msg01);
+                            msgque.Remove(msg3);
+                            goto done;
+                        }
+
+                    }
+                }
             }
+            //send message from msgque arraylist
+            SendMessage(msg2);
+            msgque.Remove(msg2);
+
+            done:
+            Thread.Sleep(5000);
         }
 
-        private void SendMessage(string msg)
+        private void SendMessage(string Dmessage)
         {
             try
             {
                 {
-                    Message = msg;
+                    Message = Dmessage;
                     WebhookURL = textBox3.Text;
 
                     Http.Post(WebhookURL, new NameValueCollection()
