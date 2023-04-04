@@ -1,4 +1,4 @@
-﻿namespace TestReadText
+﻿namespace NorthAlert
 {
     partial class MainWindow
     {

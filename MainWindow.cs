@@ -16,7 +16,7 @@ using static System.Net.WebRequestMethods;
 using System.Collections.Specialized;
 using System.Threading;
 
-namespace TestReadText
+namespace NorthAlert
 {
     public partial class MainWindow : Form
     {
@@ -50,7 +50,7 @@ namespace TestReadText
             Array warrnings = richTextBox4.Lines;
             richTextBox1.Text = "";
             //find last motified .log file in directory that has "Torch" in the name
-            if (richTextBox6.Lines.Length > 0)
+                 if (richTextBox6.Lines.Length > 0)
             {
                 textBox1.Text = richTextBox6.Lines[0];
             }
@@ -137,12 +137,11 @@ namespace TestReadText
                                 }
                             }
                         }
+                    FindWarrnings1();
                     }
-
                     catch (Exception)
                     {
                     }
-                FindWarrnings1();
         }
         private void FindWarrnings1()
         {
@@ -242,7 +241,7 @@ namespace TestReadText
                 catch (Exception)
                 {
                 }
-
+   
         }
 
         private void FindWarrnings2()
