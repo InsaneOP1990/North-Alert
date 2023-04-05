@@ -15,6 +15,7 @@ using System.Security.Policy;
 using static System.Net.WebRequestMethods;
 using System.Collections.Specialized;
 using System.Threading;
+using System.Reflection;
 
 namespace NorthAlert
 {
@@ -47,8 +48,8 @@ namespace NorthAlert
         private void FindWarrnings0()
         {
             timer1.Stop();
-            Array warrnings = richTextBox4.Lines;
             richTextBox1.Text = "";
+            Array warrnings = richTextBox4.Lines;
             //find last motified .log file in directory that has "Torch" in the name
                  if (richTextBox6.Lines.Length > 0)
             {
@@ -71,8 +72,8 @@ namespace NorthAlert
 
                     for (int x = 0; x < warrnings.Length; x++)
                     {
-                        string liney = warrnings.GetValue(x).ToString();
-                        if (lines[i].Contains(liney))
+                        string warnline = warrnings.GetValue(x).ToString();
+                        if (lines[i].Contains(warnline))
                         {
                             richTextBox1.Text += lines[i] + Environment.NewLine;
                         }
@@ -87,11 +88,117 @@ namespace NorthAlert
                     goto next;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.Message);
             }
-            next:;
-            FindNewWarrnings0();
+            next:
+            NewFindNewWarrnings0();
+        }
+
+        private void NewFindNewWarrnings0()
+        {
+            try
+            {
+                Array warrnings = richTextBox4.Lines;
+                // compare two listList<string> lines = richTextBox1.Lines.ToList();
+                List<string> lines = richTextBox1.Lines.ToList();
+                List<string> lines2 = richTextBox2.Lines.ToList();
+                List<string> newlines = lines.Except(lines2).ToList();
+                for (int i = 0; i < newlines.Count; i++)
+                {
+                    for (int x = 0; x < warrnings.Length; x++)
+                    {
+                        string warnline = warrnings.GetValue(x).ToString();
+                        if (newlines[i].Contains(warnline))
+                        {
+                            richTextBox3.Text += richTextBox7.Lines[0] + ": " + newlines[i] + Environment.NewLine;
+                            richTextBox2.Text = richTextBox1.Text;
+                            MsgQue(richTextBox7.Lines[0] + ": " + newlines[i]);
+                            //every 100 lines clear richtextbox3
+                            if (richTextBox3.Lines.Length > 100)
+                            {
+                                richTextBox3.Text = "";
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            timer1.Start();
+        }
+        private void New2FindNewWarrnings0()
+        {
+            if (richTextBox2.Text == "")
+            {
+                richTextBox2.Text = richTextBox1.Text;
+            }
+            Array keywords = richTextBox4.Lines;
+            string[] lines1 = richTextBox1.Lines;
+            string[] lines2 = richTextBox2.Lines;
+            try
+            {
+                if (richTextBox2 != richTextBox1)
+                {
+                    try
+                    { 
+                    for (int i = 0; i < lines1.Length; i++)
+                    {
+                        int index = Array.FindIndex(lines1, line => lines1[i] != lines2[i]);
+                            try
+                            {
+                                for (int k = index; k < lines1.Length; k++)
+                                {
+                                    try
+                                    {
+                                        for (int x = 0; x < keywords.Length; x++)
+                                        {
+                                            string key = keywords.GetValue(x).ToString();
+
+                                            if (lines1[x].Contains(key) & key == null)
+                                            {
+
+                                                richTextBox3.Text += richTextBox7.Lines[0] + ": " + lines1[k] + Environment.NewLine;
+                                                richTextBox2.Text = richTextBox1.Text;
+                                                MsgQue(richTextBox7.Lines[0] + ": " + lines1[k]);
+                                                //every 100 lines clear richtextbox3
+                                                if (richTextBox3.Lines.Length > 100)
+                                                {
+                                                    richTextBox3.Text = "";
+                                                }
+                                            }
+                                        }
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        MessageBox.Show("attempt to find the key  " + e.Message);
+
+                                    }
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                MessageBox.Show("for each new line " + e.Message);
+
+                            }
+                        }
+                }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("looking for new lines " + e.Message);
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("New2FindNewWarrnings0 Failed " + e.Message);
+                
+            }
+            timer1.Start();
         }
         private void FindNewWarrnings0()
         {
@@ -111,7 +218,7 @@ namespace NorthAlert
             string[] lines = richTextBox1.Lines;
             string[] lines2 = richTextBox2.Lines;
             int test = lines2.Length;
-            int test2 = test -= 2;
+            int test2 = test - 2;
                     try
                     {
                         for (int x = 0; x < warrnings2.Length; x++)
@@ -137,11 +244,13 @@ namespace NorthAlert
                                 }
                             }
                         }
-                    FindWarrnings1();
-                    }
-                    catch (Exception)
+                        
+                        }
+                    catch (Exception e)
                     {
+                    MessageBox.Show(e.Message);
                     }
+            timer1.Start();
         }
         private void FindWarrnings1()
         {
@@ -209,7 +318,7 @@ namespace NorthAlert
             string[] lines = richTextBox8.Lines;
             string[] lines2 = richTextBox9.Lines;
             int test = lines2.Length;
-            int test2 = test -= 2;
+            int test2 = test - 2;
                 try
                 {
                     for (int x = 0; x < warrnings2.Length; x++)
@@ -235,13 +344,13 @@ namespace NorthAlert
                             }
                         }
                     }
-                    FindWarrnings2();
                 }
 
-                catch (Exception)
+                catch (Exception e)
                 {
+                MessageBox.Show(e.Message);
                 }
-   
+                
         }
 
         private void FindWarrnings2()

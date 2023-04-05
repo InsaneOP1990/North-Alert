@@ -335,7 +335,7 @@
             this.richTextBox10.Name = "richTextBox10";
             this.richTextBox10.Size = new System.Drawing.Size(175, 296);
             this.richTextBox10.TabIndex = 32;
-            this.richTextBox10.Text = "106210818042937344";
+            this.richTextBox10.Text = "106210818042937344\n\n55555555555555555555";
             // 
             // label10
             // 
