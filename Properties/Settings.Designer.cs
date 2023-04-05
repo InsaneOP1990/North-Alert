@@ -74,7 +74,7 @@ namespace NorthAlert.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("[WARN]\r\n[ERROR]\r\ncheat")]
+        [global::System.Configuration.DefaultSettingValueAttribute("[FATAL]\r\n[WARN]\r\n[ERROR]\r\ncheat")]
         public string Keywords {
             get {
                 return ((string)(this["Keywords"]));
@@ -105,6 +105,43 @@ namespace NorthAlert.Properties {
             }
             set {
                 this["logname"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("GG Lobby\r\nGG Server 1\r\nGG Server 2\r\nGG Server 3\r\nGG Server 4\r\nGG Server 5")]
+        public string FileDisc {
+            get {
+                return ((string)(this["FileDisc"]));
+            }
+            set {
+                this["FileDisc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DisPing {
+            get {
+                return ((string)(this["DisPing"]));
+            }
+            set {
+                this["DisPing"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs\r\nC:\\User" +
+            "s\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs2")]
+        public string FileLogs {
+            get {
+                return ((string)(this["FileLogs"]));
+            }
+            set {
+                this["FileLogs"] = value;
             }
         }
     }
