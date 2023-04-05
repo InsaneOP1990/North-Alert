@@ -81,6 +81,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(25, 14);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.Visible = false;
             // 
             // textBox1
             // 
@@ -88,6 +89,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Visible = false;
             // 
             // button1
             // 
@@ -107,6 +109,7 @@
             this.richTextBox2.Size = new System.Drawing.Size(25, 14);
             this.richTextBox2.TabIndex = 3;
             this.richTextBox2.Text = "";
+            this.richTextBox2.Visible = false;
             // 
             // SaveButton
             // 
@@ -120,11 +123,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 452);
+            this.button3.Location = new System.Drawing.Point(976, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Check";
+            this.button3.Text = "Default";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -159,21 +162,23 @@
             this.richTextBox4.Size = new System.Drawing.Size(27, 24);
             this.richTextBox4.TabIndex = 9;
             this.richTextBox4.Text = "[WARN]\n[ERROR]\ncheat";
+            this.richTextBox4.Visible = false;
             // 
             // checkBox1
             // 
+            this.checkBox1.AccessibleDescription = " (Save while checked and program will autorun)";
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(656, 127);
+            this.checkBox1.Location = new System.Drawing.Point(254, 277);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 17);
+            this.checkBox1.Size = new System.Drawing.Size(52, 17);
             this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "AutoRun?";
+            this.checkBox1.Text = "Run?";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(709, 186);
+            this.label1.Location = new System.Drawing.Point(692, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 13);
             this.label1.TabIndex = 11;
@@ -244,9 +249,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(828, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 19;
-            this.label6.Text = "Server Name";
+            this.label6.Text = "Box Name";
             // 
             // label7
             // 
@@ -312,6 +317,7 @@
             this.richTextBox9.Size = new System.Drawing.Size(25, 14);
             this.richTextBox9.TabIndex = 29;
             this.richTextBox9.Text = "";
+            this.richTextBox9.Visible = false;
             // 
             // richTextBox8
             // 
@@ -320,6 +326,7 @@
             this.richTextBox8.Size = new System.Drawing.Size(25, 14);
             this.richTextBox8.TabIndex = 28;
             this.richTextBox8.Text = "";
+            this.richTextBox8.Visible = false;
             // 
             // richTextBox7
             // 
@@ -335,12 +342,12 @@
             this.richTextBox10.Name = "richTextBox10";
             this.richTextBox10.Size = new System.Drawing.Size(175, 296);
             this.richTextBox10.TabIndex = 32;
-            this.richTextBox10.Text = "106210818042937344\n\n55555555555555555555";
+            this.richTextBox10.Text = "\n";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(925, 186);
+            this.label10.Location = new System.Drawing.Point(921, 180);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 31;
@@ -349,7 +356,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(731, 199);
+            this.label11.Location = new System.Drawing.Point(714, 193);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 13);
             this.label11.TabIndex = 33;
@@ -358,7 +365,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(898, 199);
+            this.label12.Location = new System.Drawing.Point(894, 193);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(135, 13);
             this.label12.TabIndex = 34;
@@ -371,6 +378,7 @@
             this.richTextBox11.Size = new System.Drawing.Size(25, 14);
             this.richTextBox11.TabIndex = 36;
             this.richTextBox11.Text = "";
+            this.richTextBox11.Visible = false;
             // 
             // richTextBox12
             // 
@@ -379,6 +387,7 @@
             this.richTextBox12.Size = new System.Drawing.Size(25, 14);
             this.richTextBox12.TabIndex = 35;
             this.richTextBox12.Text = "";
+            this.richTextBox12.Visible = false;
             // 
             // richTextBox13
             // 
@@ -387,6 +396,7 @@
             this.richTextBox13.Size = new System.Drawing.Size(25, 14);
             this.richTextBox13.TabIndex = 38;
             this.richTextBox13.Text = "";
+            this.richTextBox13.Visible = false;
             // 
             // richTextBox14
             // 
@@ -395,6 +405,7 @@
             this.richTextBox14.Size = new System.Drawing.Size(25, 14);
             this.richTextBox14.TabIndex = 37;
             this.richTextBox14.Text = "";
+            this.richTextBox14.Visible = false;
             // 
             // richTextBox15
             // 
@@ -403,6 +414,7 @@
             this.richTextBox15.Size = new System.Drawing.Size(25, 14);
             this.richTextBox15.TabIndex = 40;
             this.richTextBox15.Text = "";
+            this.richTextBox15.Visible = false;
             // 
             // richTextBox16
             // 
@@ -411,6 +423,7 @@
             this.richTextBox16.Size = new System.Drawing.Size(25, 14);
             this.richTextBox16.TabIndex = 39;
             this.richTextBox16.Text = "";
+            this.richTextBox16.Visible = false;
             // 
             // richTextBox17
             // 
@@ -419,6 +432,7 @@
             this.richTextBox17.Size = new System.Drawing.Size(25, 14);
             this.richTextBox17.TabIndex = 42;
             this.richTextBox17.Text = "";
+            this.richTextBox17.Visible = false;
             // 
             // richTextBox18
             // 
@@ -427,6 +441,7 @@
             this.richTextBox18.Size = new System.Drawing.Size(25, 14);
             this.richTextBox18.TabIndex = 41;
             this.richTextBox18.Text = "";
+            this.richTextBox18.Visible = false;
             // 
             // label13
             // 
@@ -441,7 +456,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 605);
+            this.ClientSize = new System.Drawing.Size(1061, 525);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.richTextBox17);
             this.Controls.Add(this.richTextBox18);
