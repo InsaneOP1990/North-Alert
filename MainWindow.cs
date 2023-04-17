@@ -617,47 +617,54 @@ namespace NorthAlert
             // find if msg 2 contains value from richtextbox4
             Array warrnlist1 = richTextBox4.Lines;
             Array warrnlist2 = richTextBox10.Lines;
-            msgque.Add(msg2);
-            foreach (string msg3 in msgque)
+            try
             {
-                for (int k = 0; k < warrnlist1.Length; k++)
+                msgque.Add(msg2);
+                foreach (string msg3 in msgque)
                 {
-                    string line = warrnlist1.GetValue(k).ToString();
-
-                    if (msg3.Contains(line))
+                    for (int k = 0; k < warrnlist1.Length; k++)
                     {
-                        if (warrnlist2.Length > k)
-                        {
-                            string msg01 = "<@" + warrnlist2.GetValue(k).ToString() + "> " + msg3;
+                        string line = warrnlist1.GetValue(k).ToString();
 
-                            if (msg01.Contains("<@>"))
+                        if (msg3.Contains(line))
+                        {
+                            if (warrnlist2.Length > k)
+                            {
+                                string msg01 = "<@" + warrnlist2.GetValue(k).ToString() + "> " + msg3;
+
+                                if (msg01.Contains("<@>"))
+                                {
+                                    SendMessage(msg3);
+                                    msgque.Remove(msg3);
+                                    goto done;
+                                }
+                                else
+                                {
+                                    SendMessage(msg01);
+                                    msgque.Remove(msg3);
+                                    goto done;
+                                }
+                            }
+                            else
                             {
                                 SendMessage(msg3);
                                 msgque.Remove(msg3);
                                 goto done;
                             }
-                            else
-                            {
-                                SendMessage(msg01);
-                                msgque.Remove(msg3);
-                                goto done;
-                            }
-                        }
-                        else
-                        {
-                            SendMessage(msg3);
-                            msgque.Remove(msg3);
-                            goto done;
                         }
                     }
                 }
-            }
-            //send message from msgque arraylist
-            SendMessage(msg2);
-            msgque.Remove(msg2);
+                //send message from msgque arraylist
+                SendMessage(msg2);
+                msgque.Remove(msg2);
 
-            done:
-            Thread.Sleep(5000);
+                done:
+                Thread.Sleep(5000);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void SendMessage(string Dmessage)
