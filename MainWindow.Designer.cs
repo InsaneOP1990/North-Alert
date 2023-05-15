@@ -30,36 +30,36 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LogfileWarning_0_RichText = new System.Windows.Forms.RichTextBox();
+            this.CurrentPath_Textbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.CompareLogfileWarning_0_RichText = new System.Windows.Forms.RichTextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.DisWebUrlTestButton = new System.Windows.Forms.Button();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.OutputDisocrd_RichText = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Real_Keywords_Richtext = new System.Windows.Forms.RichTextBox();
+            this.Run_checkBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Webhook_Textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.ServerBoxname_Textbox = new System.Windows.Forms.TextBox();
+            this.BotPicture_Textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Keywords_Richtext = new System.Windows.Forms.RichTextBox();
+            this.OldLogname_Textbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.LogFileDir_RichText = new System.Windows.Forms.RichTextBox();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.FileDescription_RichText = new System.Windows.Forms.RichTextBox();
+            this.PingList_Richtext = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -72,24 +72,28 @@
             this.richTextBox17 = new System.Windows.Forms.RichTextBox();
             this.richTextBox18 = new System.Windows.Forms.RichTextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.LogFileName_RichText = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.New_LogFileDir_RichText = new System.Windows.Forms.RichTextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // LogfileWarning_0_RichText
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(517, 442);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(25, 14);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.Visible = false;
+            this.LogfileWarning_0_RichText.Location = new System.Drawing.Point(517, 442);
+            this.LogfileWarning_0_RichText.Name = "LogfileWarning_0_RichText";
+            this.LogfileWarning_0_RichText.Size = new System.Drawing.Size(25, 14);
+            this.LogfileWarning_0_RichText.TabIndex = 0;
+            this.LogfileWarning_0_RichText.Text = "";
+            this.LogfileWarning_0_RichText.Visible = false;
             // 
-            // textBox1
+            // CurrentPath_Textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 489);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Visible = false;
+            this.CurrentPath_Textbox.Location = new System.Drawing.Point(93, 489);
+            this.CurrentPath_Textbox.Name = "CurrentPath_Textbox";
+            this.CurrentPath_Textbox.Size = new System.Drawing.Size(136, 20);
+            this.CurrentPath_Textbox.TabIndex = 1;
+            this.CurrentPath_Textbox.Visible = false;
             // 
             // button1
             // 
@@ -102,14 +106,14 @@
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // richTextBox2
+            // CompareLogfileWarning_0_RichText
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(548, 442);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(25, 14);
-            this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "";
-            this.richTextBox2.Visible = false;
+            this.CompareLogfileWarning_0_RichText.Location = new System.Drawing.Point(548, 442);
+            this.CompareLogfileWarning_0_RichText.Name = "CompareLogfileWarning_0_RichText";
+            this.CompareLogfileWarning_0_RichText.Size = new System.Drawing.Size(25, 14);
+            this.CompareLogfileWarning_0_RichText.TabIndex = 3;
+            this.CompareLogfileWarning_0_RichText.Text = "";
+            this.CompareLogfileWarning_0_RichText.Visible = false;
             // 
             // SaveButton
             // 
@@ -134,7 +138,7 @@
             // 
             // DisWebUrlTestButton
             // 
-            this.DisWebUrlTestButton.Location = new System.Drawing.Point(549, 193);
+            this.DisWebUrlTestButton.Location = new System.Drawing.Point(954, 20);
             this.DisWebUrlTestButton.Name = "DisWebUrlTestButton";
             this.DisWebUrlTestButton.Size = new System.Drawing.Size(75, 23);
             this.DisWebUrlTestButton.TabIndex = 6;
@@ -142,43 +146,43 @@
             this.DisWebUrlTestButton.UseVisualStyleBackColor = true;
             this.DisWebUrlTestButton.Click += new System.EventHandler(this.button4_Click);
             // 
-            // richTextBox3
+            // OutputDisocrd_RichText
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(12, 313);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(621, 123);
-            this.richTextBox3.TabIndex = 7;
-            this.richTextBox3.Text = "";
+            this.OutputDisocrd_RichText.Location = new System.Drawing.Point(12, 313);
+            this.OutputDisocrd_RichText.Name = "OutputDisocrd_RichText";
+            this.OutputDisocrd_RichText.Size = new System.Drawing.Size(621, 123);
+            this.OutputDisocrd_RichText.TabIndex = 7;
+            this.OutputDisocrd_RichText.Text = "";
             // 
             // timer1
             // 
             this.timer1.Interval = 7200;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // richTextBox4
+            // Real_Keywords_Richtext
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(93, 451);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(27, 24);
-            this.richTextBox4.TabIndex = 9;
-            this.richTextBox4.Text = "[WARN]\n[ERROR]\ncheat";
-            this.richTextBox4.Visible = false;
+            this.Real_Keywords_Richtext.Location = new System.Drawing.Point(93, 451);
+            this.Real_Keywords_Richtext.Name = "Real_Keywords_Richtext";
+            this.Real_Keywords_Richtext.Size = new System.Drawing.Size(73, 24);
+            this.Real_Keywords_Richtext.TabIndex = 9;
+            this.Real_Keywords_Richtext.Text = "[WARN]\n[ERROR]\ncheat";
+            this.Real_Keywords_Richtext.Visible = false;
             // 
-            // checkBox1
+            // Run_checkBox
             // 
-            this.checkBox1.AccessibleDescription = " (Save while checked and program will autorun)";
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(254, 277);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(52, 17);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Run?";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Run_checkBox.AccessibleDescription = " (Save while checked and program will autorun)";
+            this.Run_checkBox.AutoSize = true;
+            this.Run_checkBox.Location = new System.Drawing.Point(254, 277);
+            this.Run_checkBox.Name = "Run_checkBox";
+            this.Run_checkBox.Size = new System.Drawing.Size(52, 17);
+            this.Run_checkBox.TabIndex = 10;
+            this.Run_checkBox.Text = "Run?";
+            this.Run_checkBox.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(692, 180);
+            this.label1.Location = new System.Drawing.Point(692, 278);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 13);
             this.label1.TabIndex = 11;
@@ -196,49 +200,49 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(196, 73);
+            this.label3.Location = new System.Drawing.Point(309, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "Locations of Server logs Folder (Limit 6)";
             // 
-            // textBox3
+            // Webhook_Textbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 196);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(531, 20);
-            this.textBox3.TabIndex = 14;
+            this.Webhook_Textbox.Location = new System.Drawing.Point(12, 20);
+            this.Webhook_Textbox.Name = "Webhook_Textbox";
+            this.Webhook_Textbox.Size = new System.Drawing.Size(931, 20);
+            this.Webhook_Textbox.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(229, 180);
+            this.label4.Location = new System.Drawing.Point(456, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "Discord Webhook URL:";
             // 
-            // textBox4
+            // ServerBoxname_Textbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(768, 71);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 20);
-            this.textBox4.TabIndex = 16;
-            this.textBox4.Text = "Box 1";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ServerBoxname_Textbox.Location = new System.Drawing.Point(768, 81);
+            this.ServerBoxname_Textbox.Name = "ServerBoxname_Textbox";
+            this.ServerBoxname_Textbox.Size = new System.Drawing.Size(175, 20);
+            this.ServerBoxname_Textbox.TabIndex = 16;
+            this.ServerBoxname_Textbox.Text = "Box 1";
+            this.ServerBoxname_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // BotPicture_Textbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(768, 114);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(175, 20);
-            this.textBox5.TabIndex = 17;
-            this.textBox5.Text = "https://cdn3.emoji.gg/emojis/1532-crybaby.png";
+            this.BotPicture_Textbox.Location = new System.Drawing.Point(768, 124);
+            this.BotPicture_Textbox.Name = "BotPicture_Textbox";
+            this.BotPicture_Textbox.Size = new System.Drawing.Size(175, 20);
+            this.BotPicture_Textbox.TabIndex = 17;
+            this.BotPicture_Textbox.Text = "https://cdn3.emoji.gg/emojis/1532-crybaby.png";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(828, 98);
+            this.label5.Location = new System.Drawing.Point(828, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 18;
@@ -247,7 +251,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(828, 55);
+            this.label6.Location = new System.Drawing.Point(828, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 19;
@@ -256,10 +260,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 3);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(59, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(599, 12);
+            this.label7.Size = new System.Drawing.Size(896, 18);
             this.label7.TabIndex = 20;
             this.label7.Text = "This App reads the log file and checks for keywords, It will compare new changes " +
     "to the log and look for the keywords";
@@ -267,47 +271,47 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(63, 15);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(208, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(514, 12);
+            this.label8.Size = new System.Drawing.Size(644, 15);
             this.label8.TabIndex = 21;
             this.label8.Text = "Strings with Keywords will be sent to Discord Webhook / Post Request are delayed " +
     "with a 5s interval";
             // 
-            // richTextBox5
+            // Keywords_Richtext
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(695, 212);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(175, 297);
-            this.richTextBox5.TabIndex = 24;
-            this.richTextBox5.Text = "[FATAL]\n[WARN]\n[ERROR]\ncheat";
+            this.Keywords_Richtext.Location = new System.Drawing.Point(695, 313);
+            this.Keywords_Richtext.Name = "Keywords_Richtext";
+            this.Keywords_Richtext.Size = new System.Drawing.Size(175, 196);
+            this.Keywords_Richtext.TabIndex = 24;
+            this.Keywords_Richtext.Text = "[FATAL]\n[WARN]\n[ERROR]\ncheat";
             // 
-            // textBox2
+            // OldLogname_Textbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(233, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 20);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Torch*.log";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.OldLogname_Textbox.Location = new System.Drawing.Point(12, 159);
+            this.OldLogname_Textbox.Name = "OldLogname_Textbox";
+            this.OldLogname_Textbox.Size = new System.Drawing.Size(117, 20);
+            this.OldLogname_Textbox.TabIndex = 25;
+            this.OldLogname_Textbox.Text = "Torch*.log";
+            this.OldLogname_Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(251, 38);
+            this.label9.Location = new System.Drawing.Point(12, 49);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 26;
             this.label9.Text = "Log File name:";
             // 
-            // richTextBox6
+            // LogFileDir_RichText
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(12, 89);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(499, 88);
-            this.richTextBox6.TabIndex = 27;
-            this.richTextBox6.Text = "C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs\nC:\\Users" +
+            this.LogFileDir_RichText.Location = new System.Drawing.Point(125, 65);
+            this.LogFileDir_RichText.Name = "LogFileDir_RichText";
+            this.LogFileDir_RichText.Size = new System.Drawing.Size(499, 88);
+            this.LogFileDir_RichText.TabIndex = 27;
+            this.LogFileDir_RichText.Text = "C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs\nC:\\Users" +
     "\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs2";
             // 
             // richTextBox9
@@ -328,26 +332,26 @@
             this.richTextBox8.Text = "";
             this.richTextBox8.Visible = false;
             // 
-            // richTextBox7
+            // FileDescription_RichText
             // 
-            this.richTextBox7.Location = new System.Drawing.Point(517, 89);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(107, 88);
-            this.richTextBox7.TabIndex = 30;
-            this.richTextBox7.Text = "GG Lobby\nGG Server 1\nGG Server 2\nGG Server 3\nGG Server 4\nGG Server 5";
+            this.FileDescription_RichText.Location = new System.Drawing.Point(630, 65);
+            this.FileDescription_RichText.Name = "FileDescription_RichText";
+            this.FileDescription_RichText.Size = new System.Drawing.Size(107, 88);
+            this.FileDescription_RichText.TabIndex = 30;
+            this.FileDescription_RichText.Text = "GG Lobby\nGG Server 1\nGG Server 2\nGG Server 3\nGG Server 4\nGG Server 5";
             // 
-            // richTextBox10
+            // PingList_Richtext
             // 
-            this.richTextBox10.Location = new System.Drawing.Point(876, 213);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(175, 296);
-            this.richTextBox10.TabIndex = 32;
-            this.richTextBox10.Text = "\n";
+            this.PingList_Richtext.Location = new System.Drawing.Point(876, 313);
+            this.PingList_Richtext.Name = "PingList_Richtext";
+            this.PingList_Richtext.Size = new System.Drawing.Size(175, 196);
+            this.PingList_Richtext.TabIndex = 32;
+            this.PingList_Richtext.Text = "\n";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(921, 180);
+            this.label10.Location = new System.Drawing.Point(921, 278);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 31;
@@ -356,7 +360,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(714, 193);
+            this.label11.Location = new System.Drawing.Point(714, 291);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 13);
             this.label11.TabIndex = 33;
@@ -365,7 +369,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(894, 193);
+            this.label12.Location = new System.Drawing.Point(894, 291);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(135, 13);
             this.label12.TabIndex = 34;
@@ -446,18 +450,57 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(514, 73);
+            this.label13.Location = new System.Drawing.Point(627, 49);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 13);
             this.label13.TabIndex = 43;
             this.label13.Text = "File description";
+            // 
+            // LogFileName_RichText
+            // 
+            this.LogFileName_RichText.Location = new System.Drawing.Point(12, 65);
+            this.LogFileName_RichText.Name = "LogFileName_RichText";
+            this.LogFileName_RichText.Size = new System.Drawing.Size(100, 88);
+            this.LogFileName_RichText.TabIndex = 44;
+            this.LogFileName_RichText.Text = "Torch*.log\nKeen*.log\nAdminLog*.log";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.New_LogFileDir_RichText);
+            this.panel1.Controls.Add(this.LogFileDir_RichText);
+            this.panel1.Controls.Add(this.LogFileName_RichText);
+            this.panel1.Controls.Add(this.DisWebUrlTestButton);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.Webhook_Textbox);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.ServerBoxname_Textbox);
+            this.panel1.Controls.Add(this.BotPicture_Textbox);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.OldLogname_Textbox);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.FileDescription_RichText);
+            this.panel1.Location = new System.Drawing.Point(1, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1061, 195);
+            this.panel1.TabIndex = 45;
+            // 
+            // New_LogFileDir_RichText
+            // 
+            this.New_LogFileDir_RichText.Location = new System.Drawing.Point(154, 156);
+            this.New_LogFileDir_RichText.Name = "New_LogFileDir_RichText";
+            this.New_LogFileDir_RichText.Size = new System.Drawing.Size(499, 39);
+            this.New_LogFileDir_RichText.TabIndex = 45;
+            this.New_LogFileDir_RichText.Text = "";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 525);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox17);
             this.Controls.Add(this.richTextBox18);
             this.Controls.Add(this.richTextBox15);
@@ -468,41 +511,31 @@
             this.Controls.Add(this.richTextBox12);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.richTextBox10);
+            this.Controls.Add(this.PingList_Richtext);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.richTextBox7);
             this.Controls.Add(this.richTextBox9);
             this.Controls.Add(this.richTextBox8);
-            this.Controls.Add(this.richTextBox6);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.richTextBox5);
+            this.Controls.Add(this.Keywords_Richtext);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.DisWebUrlTestButton);
+            this.Controls.Add(this.Run_checkBox);
+            this.Controls.Add(this.Real_Keywords_Richtext);
+            this.Controls.Add(this.OutputDisocrd_RichText);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.CompareLogfileWarning_0_RichText);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.CurrentPath_Textbox);
+            this.Controls.Add(this.LogfileWarning_0_RichText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Text = "North Alert";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,36 +543,36 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox LogfileWarning_0_RichText;
+        private System.Windows.Forms.TextBox CurrentPath_Textbox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox CompareLogfileWarning_0_RichText;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button DisWebUrlTestButton;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox OutputDisocrd_RichText;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RichTextBox Real_Keywords_Richtext;
+        private System.Windows.Forms.CheckBox Run_checkBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Webhook_Textbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox ServerBoxname_Textbox;
+        private System.Windows.Forms.TextBox BotPicture_Textbox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox Keywords_Richtext;
+        private System.Windows.Forms.TextBox OldLogname_Textbox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox LogFileDir_RichText;
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.RichTextBox richTextBox8;
-        private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.RichTextBox richTextBox10;
+        private System.Windows.Forms.RichTextBox FileDescription_RichText;
+        private System.Windows.Forms.RichTextBox PingList_Richtext;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -552,6 +585,9 @@
         private System.Windows.Forms.RichTextBox richTextBox17;
         private System.Windows.Forms.RichTextBox richTextBox18;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RichTextBox LogFileName_RichText;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox New_LogFileDir_RichText;
     }
 }
 
