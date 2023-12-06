@@ -12,7 +12,7 @@ namespace NorthAlert.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,18 +20,6 @@ namespace NorthAlert.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs")]
-        public string Logs {
-            get {
-                return ((string)(this["Logs"]));
-            }
-            set {
-                this["Logs"] = value;
             }
         }
         
@@ -61,8 +49,7 @@ namespace NorthAlert.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://img1.wsimg.com/isteam/ip/b4b9be8a-8d11-4a70-bf87-031e19961b95/profile4.pn" +
-            "g")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Botpic {
             get {
                 return ((string)(this["Botpic"]));
@@ -98,7 +85,7 @@ namespace NorthAlert.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Torch*.log")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Torch*.log\r\nKeen*.log\r\nAdminLog*.log")]
         public string logname {
             get {
                 return ((string)(this["logname"]));
@@ -110,7 +97,7 @@ namespace NorthAlert.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("GG Lobby\r\nGG Server 1\r\nGG Server 2\r\nGG Server 3\r\nGG Server 4\r\nGG Server 5")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Lobby\r\nServer 1\r\nServer 2\r\nServer 3\r\nServer 4\r\nServer 5")]
         public string FileDisc {
             get {
                 return ((string)(this["FileDisc"]));
@@ -122,7 +109,7 @@ namespace NorthAlert.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\r\n\r\n\r\n&964549461898563684")]
         public string DisPing {
             get {
                 return ((string)(this["DisPing"]));
@@ -134,14 +121,38 @@ namespace NorthAlert.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs\r\nC:\\User" +
-            "s\\Insane\\Desktop\\Space Engneering Stuff GG life\\Torch-Server\\Logs2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Insane\\Desktop\\TorchServers\\torch-server1\\Logs")]
         public string FileLogs {
             get {
                 return ((string)(this["FileLogs"]));
             }
             set {
                 this["FileLogs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Sound on different thread:\r\nMissing definition\r\nSaving grid\r\nQuantumHangar.Parall" +
+            "elSpawner:")]
+        public string Excludelist {
+            get {
+                return ((string)(this["Excludelist"]));
+            }
+            set {
+                this["Excludelist"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int Cooldown {
+            get {
+                return ((int)(this["Cooldown"]));
+            }
+            set {
+                this["Cooldown"] = value;
             }
         }
     }
