@@ -18,6 +18,7 @@ namespace NorthAlert
         public MainWindow()
         {
             InitializeComponent();
+
         }
         //--------------------------------------------------------------------------- Todo list ------------------------------------------------------------------------------
         //
@@ -484,6 +485,15 @@ namespace NorthAlert
             //OutputDisocrd_RichText.SelectionStart = OutputDisocrd_RichText.Text.Length;
             // scroll it automatically
             //OutputDisocrd_RichText.ScrollToCaret();
+        }
+
+        private void MenuItem2_Click(object sender, EventArgs e)
+        {
+
+                AboutBox1 about = new AboutBox1();
+                about.Show();
+
+
         }
     }
     class Http

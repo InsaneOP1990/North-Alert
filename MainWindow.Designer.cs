@@ -65,8 +65,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.OutputDisocrd_RichText = new System.Windows.Forms.RichTextBox();
             this.kryptonRibbon1 = new ComponentFactory.Krypton.Ribbon.KryptonRibbon();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.MenuItem2 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonHeaderGroup1.Panel)).BeginInit();
             this.kryptonHeaderGroup1.Panel.SuspendLayout();
@@ -464,9 +465,9 @@
             this.kryptonRibbon1.QATUserChange = false;
             this.kryptonRibbon1.RibbonAppButton.AppButtonImage = ((System.Drawing.Image)(resources.GetObject("kryptonRibbon1.RibbonAppButton.AppButtonImage")));
             this.kryptonRibbon1.RibbonAppButton.AppButtonMenuItems.AddRange(new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItemBase[] {
-            this.MenuItem1});
+            this.MenuItem1,
+            this.MenuItem2});
             this.kryptonRibbon1.RibbonAppButton.AppButtonShowRecentDocs = false;
-            this.kryptonRibbon1.SelectedContext = null;
             this.kryptonRibbon1.SelectedTab = null;
             this.kryptonRibbon1.ShowMinimizeButton = false;
             this.kryptonRibbon1.Size = new System.Drawing.Size(1111, 143);
@@ -475,14 +476,19 @@
             this.kryptonRibbon1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.kryptonRibbon1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // MenuItem1
             // 
             this.MenuItem1.CheckOnClick = true;
             this.MenuItem1.Text = "Turn on Debug?";
+            // 
+            // MenuItem2
+            // 
+            this.MenuItem2.Text = "About Me?";
+            this.MenuItem2.Click += new System.EventHandler(this.MenuItem2_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainWindow
             // 
@@ -546,5 +552,6 @@
         private System.Windows.Forms.Label label17;
         private ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown Cooldown_Textbox;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem MenuItem1;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem MenuItem2;
     }
 }
