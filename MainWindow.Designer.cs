@@ -417,9 +417,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(160, 55);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(699, 18);
+            this.label7.Size = new System.Drawing.Size(694, 18);
             this.label7.TabIndex = 56;
-            this.label7.Text = "This App reads log files and checks it aganest the last time it ran while looking" +
+            this.label7.Text = "This App reads log files and checks it against the last time it ran while looking" +
     " for keywords";
             // 
             // label2

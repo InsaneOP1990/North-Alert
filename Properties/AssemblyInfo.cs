@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("NorthAlert")]
-[assembly: AssemblyDescription("This App reads log files and checks it aganest the last time it ran while looking for keywords. New lines with Keywords will be sent to the Discord Webhook")]
+[assembly: AssemblyDescription("This App reads log files and checks it against the last time it ran while looking for keywords. New lines with Keywords will be sent to the Discord Webhook")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Run-Insane Innovations")]
 [assembly: AssemblyProduct("NorthAlert")]
